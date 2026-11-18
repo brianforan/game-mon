@@ -1,0 +1,64 @@
+logs/
+data/
+node_modules/
+.env
+
+# ===== Secrets & local environment =====
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.ppk
+*.kdbx
+id_rsa*
+id_ed25519*
+id_ecdsa*
+!*.pub
+.netrc
+.htpasswd
+credentials*.json
+*service-account*.json
+*.har
+
+# ===== Local-only (convention: *.local.* never leaves this machine) =====
+*.local
+*.local.*
+.private/
+
+# ===== AI assistant local state =====
+CLAUDE.local.md
+.claude/settings.local.json
+.aider*
+.specstory/
+
+# ===== OS / editor =====
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# ===== Logs, caches, scratch =====
+*.log
+tmp/
+.cache/
+
+# ===== Packet / event captures (contain real traffic) =====
+*.pcapng
+*.pcap
+*.etl
+
+# ===== Node =====
+npm-debug.log*
+.npm/
+coverage/
+*.tgz

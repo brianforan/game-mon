@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Latency Monitor</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="title">
+      <h1>Game Latency Monitor</h1>
+      <span id="conn" class="muted">connecting…</span>
+    </div>
+    <div class="chips" id="chips"></div>
+  </header>
+
+  <div id="mainView">
+  <section class="controls">
+    <div class="filters">
+      <div id="pills" class="pills" role="group" aria-label="Show servers used by these kinds of apps"></div>
+      <button type="button" id="clearFilter" class="clear">Clear</button>
+      <span id="filterNote" class="muted"></span>
+    </div>
+    <form id="addForm" class="add">
+      <input id="addHost" placeholder="Add a server to ping (IP or hostname)" autocomplete="off" required>
+      <input id="addName" placeholder="Label (optional)" autocomplete="off">
+      <button type="submit">Add</button>
+    </form>
+  </section>
+
+  <main>
+    <div class="list-head" aria-hidden="true">
+      <span>Server</span><span>Latency</span><span>Last 3 minutes</span>
+    </div>
+    <div id="list" role="list"></div>
+    <p id="empty" class="empty" hidden></p>
+  </main>
+  </div>
+
+  <section id="detailView" class="detail" hidden></section>
+
+  <div id="tip" class="tip" role="tooltip" hidden></div>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

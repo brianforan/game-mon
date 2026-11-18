@@ -1,0 +1,65 @@
+{
+  "port": 7788,
+  "pollIntervalMs": 3000,
+  "pingIntervalMs": 2000,
+  "staleAfterMs": 45000,
+  "maxTargets": 60,
+  "udpCapture": {
+    "enabled": true,
+    "intervalMs": 15000,
+    "seconds": 4,
+    "method": "etw"
+  },
+  "log": {
+    "enabled": true,
+    "dir": "logs",
+    "summaryIntervalMs": 10000,
+    "categories": [
+      "game",
+      "pinned"
+    ]
+  },
+  "processOverrides": {},
+  "geo": {
+    "enabled": true
+  },
+  "history": {
+    "backend": "elastic",
+    "days": 14,
+    "sessionGapMinutes": 10
+  },
+  "elastic": {
+    "urlEnv": "ELASTIC_URL",
+    "apiKeyEnv": "ELASTIC_API_KEY",
+    "processIndex": "metrics-system.process-*",
+    "perfmonIndex": "metrics-windows.perfmon-*",
+    "fields": {}
+  },
+  "gameProcesses": [
+    "League of Legends.exe",
+    "VALORANT-Win64-Shipping.exe",
+    "cs2.exe",
+    "dota2.exe",
+    "FortniteClient-Win64-Shipping.exe",
+    "r5apex.exe",
+    "r5apex_dx12.exe",
+    "Overwatch.exe",
+    "RocketLeague.exe",
+    "cod.exe",
+    "GTA5.exe",
+    "PUBG-Win64-Shipping.exe",
+    "TslGame.exe",
+    "destiny2.exe",
+    "RainbowSix.exe",
+    "Wow.exe",
+    "Diablo IV.exe",
+    "MarvelRivals-Win64-Shipping.exe",
+    "DeadByDaylight-Win64-Shipping.exe"
+  ],
+  "pinnedTargets": [
+    {
+      "name": "Cloudflare DNS (baseline)",
+      "host": "1.1.1.1"
+    }
+  ]
+}
